@@ -1,54 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Advice website for first-time college students" />
-  <title>College Advice Website</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="College Starter Guide: a simple, accessible how-to site for first-time college students with steps, resources, a weekly schedule template, and FAQ." />
+  <title>College Starter Guide — Accessible How-To for First-Year Students</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to College Advice 101</h1>
-    <nav>
-      <a href="#how-to">How-To Steps</a>
-      <a href="#resources">Resources</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container site-nav">
+      <a class="logo" href="#home">College Starter</a>
+      <button id="menuToggle" aria-controls="navList" aria-expanded="false" aria-label="Open menu">Menu</button>
+      <ul id="navList" class="nav-list" role="navigation" aria-label="Primary">
+        <li><a href="#steps">How-To Steps</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#schedule">Sample Schedule</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
-  <main>
-    <section id="how-to">
-      <h2>Step-by-Step Guide</h2>
-      <p>Learn how to start strong in your first semester of college.</p>
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">College Starter: Your 7-Day Plan</h1>
+        <p class="lead">Quick steps and trustworthy resources to feel ready for week one.</p>
+        <a class="cta" href="#steps">Get the Checklist</a>
+      </div>
     </section>
 
-    <section id="resources">
-      <h2>Resources</h2>
-      <ul>
-        <li>Financial Aid</li>
-        <li>Study Tips</li>
-        <li>Dorm Essentials</li>
-      </ul>
+    <section id="steps" aria-labelledby="steps-heading">
+      <div class="container">
+        <h2 id="steps-heading">Your 7-Day Plan</h2>
+        <ol class="plan-list">
+          <li>
+            <h3>Day 1 — Activate Accounts</h3>
+            <p>Set up student email, LMS (e.g., Canvas), and portal access.</p>
+          </li>
+          <li>
+            <h3>Day 2 — Build Schedule</h3>
+            <p>Confirm registration; add class times, commute, meals, and breaks.</p>
+          </li>
+          <li>
+            <h3>Day 3 — Find Resources</h3>
+            <p>Locate advising, tutoring, library, and IT help desk hours.</p>
+          </li>
+          <li>
+            <h3>Day 4 — Study Routine</h3>
+            <p>Create a weekly study plan; choose a quiet study spot.</p>
+          </li>
+          <li>
+            <h3>Day 5 — Money Basics</h3>
+            <p>Review financial aid, textbooks options, and budget apps.</p>
+          </li>
+          <li>
+            <h3>Day 6 — Community</h3>
+            <p>Join a club or event; introduce yourself to classmates.</p>
+          </li>
+          <li>
+            <h3>Day 7 — Check-in</h3>
+            <p>Skim syllabi; plan your first week; set reminders.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <section id="faq">
-      <h2>FAQ</h2>
-      <p>Answers to common first-year questions.</p>
+    <section id="resources" aria-labelledby="resources-heading">
+      <div class="container">
+        <h2 id="resources-heading">Tools & Resources</h2>
+        <ul class="resources-grid">
+          <li><a href="https://studentaid.gov/" target="_blank" rel="noopener">FAFSA & Financial Aid</a></li>
+          <li><a href="https://www.khanacademy.org/college-careers-more" target="_blank" rel="noopener">Study Skills (Khan Academy)</a></li>
+          <li><a href="https://www.cdc.gov/mentalhealth/" target="_blank" rel="noopener">Student Wellness (CDC)</a></li>
+          <li><a href="https://www.a11yproject.com/checklist/" target="_blank" rel="noopener">Accessibility Checklist (A11Y Project)</a></li>
+        </ul>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact / About</h2>
-      <p>Email us at <a href="mailto:advice@college.com">advice@college.com</a></p>
+    <section id="schedule" aria-labelledby="schedule-heading">
+      <div class="container">
+        <h2 id="schedule-heading">Sample Week Schedule</h2>
+        <p>This example shows how to block time for classes, study, and breaks.</p>
+        <div class="table-wrap" role="region" aria-labelledby="schedule-heading" tabindex="0">
+          <table>
+            <caption>First-Semester Weekly Plan</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">8–10 AM</th>
+                <th scope="col">10–12 PM</th>
+                <th scope="col">1–3 PM</th>
+                <th scope="col">3–5 PM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Mon</th><td>Math 101</td><td>Study</td><td>CS 110</td><td>Gym</td>
+              </tr>
+              <tr>
+                <th scope="row">Tue</th><td>Study</td><td>English 120</td><td>Work</td><td>Library</td>
+              </tr>
+              <tr>
+                <th scope="row">Wed</th><td>Math 101</td><td>Study Group</td><td>CS 110 Lab</td><td>Advising</td>
+              </tr>
+              <tr>
+                <th scope="row">Thu</th><td>Study</td><td>English 120</td><td>Work</td><td>Club</td>
+              </tr>
+              <tr>
+                <th scope="row">Fri</th><td>Math 101</td><td>Office Hours</td><td>Project Time</td><td>Free</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+        <details>
+          <summary>How many credits should I take?</summary>
+          <p>Most freshmen start with 12–15 credits; confirm with your advisor.</p>
+        </details>
+
+        <details>
+          <summary>When should I buy books?</summary>
+          <p>After the first class—check the syllabus; some materials are optional or free.</p>
+        </details>
+
+        <details>
+          <summary>What are office hours?</summary>
+          <p>Times when instructors meet students—go early, bring questions, and follow up.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">Contact</h2>
+        <p>Questions? Send a message. We only use this info to reply.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name<span aria-hidden="true"> *</span></label>
+            <input id="name" name="name" type="text" required aria-required="true" />
+            <small class="error" id="nameError" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email<span aria-hidden="true"> *</span></label>
+            <input id="email" name="email" type="email" required aria-required="true" />
+            <small class="error" id="emailError" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Message<span aria-hidden="true"> *</span></label>
+            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+            <small class="error" id="messageError" aria-live="polite"></small>
+          </div>
+
+          <button type="submit">Send</button>
+          <p class="form-note">By submitting, you agree we’ll use your info only to respond. No data is stored on this demo site.</p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 College Advice Website</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>&copy; <span id="year"></span> College Starter Guide</small>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
